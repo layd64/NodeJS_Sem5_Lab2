@@ -10,17 +10,14 @@ const compat = new FlatCompat({ baseDirectory: import.meta.dirname });
 export default tseslint.config(
   { ignores: ['eslint.config.mjs'] },
 
-  // Core + TS
   eslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
 
   // Import plugin legacy presets via compat (instead of importPlugin.configs.*)
   ...compat.extends('plugin:import/recommended', 'plugin:import/typescript'),
 
-  // Prettier last
   eslintPluginPrettierRecommended,
 
-  // Project options + rules
   {
     languageOptions: {
       globals: { ...globals.node, ...globals.jest },
@@ -31,7 +28,6 @@ export default tseslint.config(
       'import/resolver': { typescript: true, node: true },
     },
     rules: {
-      // Keep existing relaxations
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-floating-promises': 'warn',
       '@typescript-eslint/no-unsafe-argument': 'warn',

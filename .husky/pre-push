@@ -1,1 +1,2 @@
-npm run prepush
+echo "Running tests before push..."
+npm test

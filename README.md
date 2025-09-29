@@ -82,9 +82,9 @@
 * **Аналог - JSHint**: ESLint більш сучасний та підтримує TypeScript.
 
 
-### Git-hook через Husky + lint-staged:
-- pre-commit: тести.
-- pre-push: форматування + eslint + запуск зборки/компіляції + тести, щоб перевіряти pipeline перед пушем.
+### Git-hook через Husky:
+- pre-commit: форматування + eslint + тести, щоб перевіряти pipeline перед пушем.
+- pre-push: тести.
 
 
 ## Початок роботи

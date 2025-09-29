@@ -1,1 +1,8 @@
+echo "Linting..."
+npm run lint
+
+echo "Formatting..."
+npm run format
+
+echo "Running tests..."
 npm test
