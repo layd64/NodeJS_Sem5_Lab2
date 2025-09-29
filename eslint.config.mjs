@@ -13,7 +13,7 @@ export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
 
-  // Import plugin legacy presets via compat (instead of importPlugin.configs.*)
+  // Import legacy plugin presets via compat helper from @eslint/eslintrc
   ...compat.extends('plugin:import/recommended', 'plugin:import/typescript'),
 
   eslintPluginPrettierRecommended,
@@ -32,7 +32,7 @@ export default tseslint.config(
       '@typescript-eslint/no-floating-promises': 'warn',
       '@typescript-eslint/no-unsafe-argument': 'warn',
 
-      // Emulate common Airbnb constraints (non-formatting, Prettier-safe)
+      // Emulate common Airbnb constraints
       eqeqeq: ['error', 'always'],
       'no-var': 'error',
       'prefer-const': ['error', { destructuring: 'all' }],
