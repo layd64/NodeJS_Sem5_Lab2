@@ -83,7 +83,7 @@
 
 
 ### Git-hook через Husky + lint-staged:
-- pre-commit: форматування + eslint --fix на staged файлах
+- pre-commit: тести.
 - pre-push: форматування + eslint + запуск зборки/компіляції + тести, щоб перевіряти pipeline перед пушем.
 
 
